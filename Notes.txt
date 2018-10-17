@@ -1,0 +1,37 @@
+Static method:
+A staticmethod is a method that knows nothing about the class or instance it was called on. It just gets the arguments that were passed, no implicit first argument. 
+It is basically useless in Python -- you can just use a module function instead of a staticmethod.
+A static method does not receive an implicit first argument. To declare a static method, use this idiom:
+
+class C:
+    @staticmethod
+    def f(arg1, arg2, ...): ... 
+
+Class Method:
+A classmethod, on the other hand, is a method that gets passed the class it was called on, or the class of the instance it was called on, as first argument. 
+This is useful when you want the method to be a factory for the class: since it gets the actual class it was called on as first argument, 
+you can always instantiate the right class, even when subclasses are involved.
+A class method receives the class as implicit first argument, just like an instance method receives the instance. To declare a class method, use this idiom:
+
+class C:
+    @classmethod
+    def f(cls, arg1, arg2, ...): ... 
+The @classmethod form is a function decorator 
+
+NOTE : using classmethod is especially helpful since we use cls() even if class name Blog() is later changed to BLOG() we wont have to change
+its implementation everywhere.
+
+Instance method:
+similar to class method but it receives an instance of class. 
+class C:
+    def f(self, arg1, arg2, ...): ... 
+
+
+
+
+SESSION - 
+Web apps sometimes need to remember information across multiple user requests. You can do this using a session object.
+Web requests are stateless. 'stateless' means 'memory-less'.Session variables remember data from request to request, and specifically for each user
+
+Session variables sometimes use cookies to record information. Cookies are little bits of information stored on the client's computer.
+

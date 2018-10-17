@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<!--this gets all functionalities of base.html -->
+{% block content %}
+<div class="container login-page-form" >
+    <form id="login-form" action="/auth/login" method="POST">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="form-control" name='email'>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" name='password'>
+        </div>
+    
+    
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>
+    
+{% endblock %}
